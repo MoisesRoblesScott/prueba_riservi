@@ -3,7 +3,6 @@
 		<head></head>
 		<body id="body">
 			<div id="contenedor">
-
 				<div class="bloque1">
 					<p>Este es el Bloque 1 dentro del contenedor.</p>
 				</div>
@@ -11,7 +10,6 @@
 				<div class="bloque2">
 					<p>Este es el contenido del Bloque 2 dentro del contenedor, este contiene mas texto, por eso debe ser mas largo.</p>
 				</div>
-
 			</div>
 
 			<div class="bloque1">
@@ -23,16 +21,15 @@
 			</div>
 
 			<div class="v-container" v-for="(data, index) in myArray" :key="data.id">
-        <div 
-          v-show="index % 2 !== 0"
-          :style="{ backgroundColor: index % 2 !== 0 ? '#e6e6e6' : 'transparent'}"
-        >
-          <span> {{ data.name }} </span>
-          <span> 
-            {{ data.roles.join(', ') }} 
-          </span>
-          
-        </div>
+				<div 
+					v-show="index % 2 !== 0"
+					:style="{ backgroundColor: index % 2 !== 0 ? '#e6e6e6' : 'transparent'}"
+				>
+					<span> {{ data.name }} </span>
+					<span> 
+						{{ data.roles.join(', ') }} 
+					</span>
+				</div>
 			</div>
 
 			<div class="btn" @click="salida">
@@ -40,45 +37,44 @@
 			</div>
 
 			<div class="output">
-        {{ output }}
-      </div>
-
+        		{{ output }}
+      		</div>
 			<div class="clear"></div>
-
 		</body>
 
 	</html>
 
 </template>
 <script>
-	export default {
 
-		name: 'SupportView',
-		components: {},
-		data () {
-			return {
-				myArray: [
-					{ id : 1, name: 'Andres', roles: [1,2,3] },
-					{ id : 2, name: 'Laura', roles: [1,2,3] },
-					{ id : 3, name: 'Alejandra', roles: [1,2,3] },
-					{ id : 4, name: 'Moana', roles: [1,2,3] },
-					{ id : 5, name: 'Maui', roles: [1,2,3] }
-				],
-				output: "",
-			}
-		},
-		computed:{
+export default {
+
+	name: 'SupportView',
+	components: {},
+	data () {
+		return {
+			myArray: [
+				{ id : 1, name: 'Andres', roles: [1,2,3] },
+				{ id : 2, name: 'Laura', roles: [1,2,3] },
+				{ id : 3, name: 'Alejandra', roles: [1,2,3] },
+				{ id : 4, name: 'Moana', roles: [1,2,3] },
+				{ id : 5, name: 'Maui', roles: [1,2,3] }
+			],
+			output: "",
+		}
+	},
+	computed:{
 		total(){
 		return this.myArray.length;
-		}
-		},
-		methods:{
+    	}
+	},
+	methods:{
 		salida() {
 		this.output = `El total de listado es: ${this.total}`
 		}
-		}
-
 	}
+}
+
 </script>
 
 <style type="text/css">
