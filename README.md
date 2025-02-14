@@ -1,7 +1,7 @@
 # 📌 prueba_riservi  
 **Prueba Técnica para Desarrolladores Front-end**  
 
-Me vi en la necesidad de crear este proyecto en **Vue 2** creada desde cero utilizando **npm** como gestor de paquetes.  
+Me vi en la necesidad de crear este proyecto con **Vue CLI** utilizando **npm** como gestor de paquetes.  
 
 ## 📂 Estructura del Proyecto  
 Dentro del repositorio encontrarás:  
