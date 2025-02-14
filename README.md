@@ -12,12 +12,12 @@ Dentro del repositorio encontrarás:
 Para correr el proyecto, asegúrate de tener **Node.js** instalado en tu máquina. Luego, sigue estos pasos en la terminal:  
 
 1️⃣ Instalar las dependencias necesarias:  
-```
+```sh
 npm install
 ```
 
 2️⃣ Ejecutar el servidor de desarrollo:  
-```
+```sh
 npm run serve
 ```  
 
